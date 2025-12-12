@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       useMaterial3: true,
       ),
-      initialRoute:  '/',
+      initialRoute: '/',
       routes: {
         '/': (context) => const LoginPage(),
         '/feed': (context) => const FeedPage(),
