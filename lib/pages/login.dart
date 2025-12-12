@@ -41,6 +41,7 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 50),
 
+              // email / kullanıcı adı girişi
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -54,6 +55,7 @@ class LoginPage extends StatelessWidget {
                     )
                   ]
                 ),
+
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Padding(
@@ -79,7 +81,53 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              
+              // şifre girişi
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withValues(alpha: 0.5),
+                      spreadRadius: 2,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3),
+                    )
+                  ]
+                ),
+
+                child: TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: SvgPicture.asset(
+                        'assets/icons/passwordicon.svg',
+                        /* width: 20,
+                        height: 20,
+                        fit: BoxFit.contain, */
+                        colorFilter: const ColorFilter.mode(
+                          Color(0xFFE47000),
+                          BlendMode.srcIn,
+                        )
+                      ),
+                    ),
+                    /* prefixIconConstraints: const BoxConstraints(
+                      minWidth: 48,
+                      minHeight: 48,
+                    ), */
+                    hintText: 'Password',
+                    hintStyle: TextStyle(color:Colors.grey[600]),
+                    border: InputBorder.none,
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 15.0,
+                    )
+                  ),
+                )
+              ),
+
+              const SizedBox(height: 32),
+
             ]
           ),
         )
