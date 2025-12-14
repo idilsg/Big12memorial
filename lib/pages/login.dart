@@ -125,10 +125,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 52,
                 child: ElevatedButton(
-                  onPressed: () {
-                    // login işlemi
-                    Navigator.pushReplacementNamed(context, '/feed');
-                  },
+                  onPressed: () {Navigator.pushReplacementNamed(context, '/feed');},
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.black,            
@@ -152,9 +149,7 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.grey[700]),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacementNamed(context, '/register');
-                    },
+                    onTap: () {Navigator.pushReplacementNamed(context, '/register');},
                     child: const Text("Sign up",
                       style: TextStyle(
                         color: Colors.black,
