@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // email / kullanıcı adı girişi
+              // email input
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -63,7 +63,7 @@ class LoginPage extends StatelessWidget {
                       child: SvgPicture.asset(
                         'assets/icons/usericon.svg',
                         colorFilter: const ColorFilter.mode(
-                          Color(0xFFE47000), 
+                          Colors.black, 
                           BlendMode.srcIn
                           )
                       )
@@ -81,7 +81,7 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              // şifre girişi
+              // password input
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -102,19 +102,12 @@ class LoginPage extends StatelessWidget {
                       padding: const EdgeInsets.all(16.0),
                       child: SvgPicture.asset(
                         'assets/icons/passwordicon.svg',
-                        /* width: 20,
-                        height: 20,
-                        fit: BoxFit.contain, */
                         colorFilter: const ColorFilter.mode(
-                          Color(0xFFE47000),
+                          Colors.black,
                           BlendMode.srcIn,
                         )
                       ),
                     ),
-                    /* prefixIconConstraints: const BoxConstraints(
-                      minWidth: 48,
-                      minHeight: 48,
-                    ), */
                     hintText: 'Password',
                     hintStyle: TextStyle(color:Colors.grey[600]),
                     border: InputBorder.none,
@@ -128,6 +121,50 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 32),
 
+              // Log in button
+              SizedBox(
+                height: 52,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // login işlemi
+                    Navigator.pushReplacementNamed(context, '/feed');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.black,            
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: const Text("Log In",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 18),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account? ",
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, '/register');
+                    },
+                    child: const Text("Sign up",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ]
           ),
         )

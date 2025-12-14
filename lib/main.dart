@@ -3,6 +3,7 @@ import 'package:big12memorial/pages/feed.dart';
 import 'package:big12memorial/pages/login.dart';
 import 'package:big12memorial/pages/new_post_screen.dart';
 import 'package:big12memorial/pages/profile.dart';
+import 'package:big12memorial/pages/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginPage(),
         '/feed': (context) => const FeedPage(),
         '/newPost': (context) => const NewPostPage(),
-        '/profile': (context) => const ProfilePage()
+        '/profile': (context) => const ProfilePage(),
+        '/register': (context) => const RegisterPage()
       }
     );
   }
